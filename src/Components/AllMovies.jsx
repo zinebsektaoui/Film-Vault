@@ -1,13 +1,13 @@
 import movies from "../data/data";
 
-export default function AllMovies() {
+export default function AllMovies({ movies }) {  
   return (
     <section className="all-movies">
       <h2 className="all-movies-title">TOUS LES FILMS</h2>
 
       <div className="all-movies-container">
         {movies.map((movie) => (
-          <div className="movieCard" key={movie.title}>
+          <div className="movieCard" key={movie.id}>  {/* ← utilise id au lieu de title */}
             <img className="movie-image" src={movie.image} alt={movie.title} />
 
             <div className="movieContent">
