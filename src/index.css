@@ -251,7 +251,7 @@ body {
 
 /* CONTENT */
 
-.movie-content {
+.movieContent {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -324,3 +324,119 @@ body {
 .movie-content button:hover {
   background: #7c4dff;
 }
+
+
+/* all movies */
+.all-movies {
+  min-height: 100vh;
+  background-color: #101014;
+  padding: 18px 14px;
+  color: #ffffff;
+  margin-top: 20px;
+  font-family: "Courier New", monospace;
+}
+
+.all-movies-title {
+  color: #ffc400;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 26px;
+  text-align: left;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+
+.all-movies-container {
+  display: flex;
+  gap: 48px;
+  /* height: 200px; */
+  margin-left: 28px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.movieCard {
+  width: 225px;
+  height: 260px;
+  background-color: #1b1c24;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #262832;
+  transition: 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: #008cff;
+  box-shadow: 0 0 0 2px #008cff;
+}
+
+.movie-image {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.movieContent {
+  position: relative;
+  padding: 14px 16px;
+  height: 100px;
+}
+
+.movie-title {
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+  max-width: 135px;
+  text-transform: uppercase;
+}
+
+.movie-rating {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.star {
+  color: #ffc400;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.movie-year {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: #e4e4e4;
+}
+
+.movie-genre {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #e4e4e4;
+}
+
+.movie-options {
+  position: absolute;
+  right: 13px;
+  bottom: 11px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.movie-options:hover {
+  color: #ffc400;
+} 
