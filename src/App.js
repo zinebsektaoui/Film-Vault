@@ -4,20 +4,31 @@ import moviesData from "./data/data"
 import TopOne from './Components/TopOne';
 import TopThree from './Components/TopThree'
 import AllMovies from './Components/AllMovies';
-import AddForm from './Components/AddForm';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [movies, setMovies] = useState(moviesData)
-  const topOneMovie = movies.sort((a, b) => b.rating - a.rating)[0];
-  const topThreeMovies = movies.sort((a,b) => b.rating - a.rating).slice(1, 4)
+  // Charger les films depuis localStorage ou utiliser les données initiales
+  const [movies, setMovies] = useState(() => {
+    const savedMovies = localStorage.getItem("movies");
+    return savedMovies ? JSON.parse(savedMovies) : moviesData;
+  });
+
+  // ⚠️ Crée une copie avant de trier pour ne pas modifier l'original
+  const sortedMovies = [...movies].sort((a, b) => b.rating - a.rating);
+  const topOneMovie = sortedMovies[0];
+  const topThreeMovies = sortedMovies.slice(1, 4);
+
+  // Sauvegarder dans localStorage à chaque changement
+  useEffect(() => {
+    localStorage.setItem("movies", JSON.stringify(movies));
+  }, [movies]);
+
   return (
     <div className="App">
-      <Header />
-      <TopOne movie={topOneMovie}/>
-      <TopThree movies={topThreeMovies}/>
-      <AllMovies/>
-      <AddForm setMovies={setMovies}/>
+      <Header setMovies={setMovies} />  {/* ← passe setMovies à Header */}
+      <TopOne movie={topOneMovie} />
+      <TopThree movies={topThreeMovies} />
+      <AllMovies movies={movies} />  {/* ← passe movies à AllMovies */}
     </div>
   );
 }
