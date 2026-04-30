@@ -1,7 +1,6 @@
 export default function Header() {
   return (
     <header className="header">
-      {/* Logo */}
       <div className="logo">
         <span className="logo-icon">▶</span>
         <h1>
@@ -9,9 +8,7 @@ export default function Header() {
         </h1>
       </div>
 
-      {/* Actions */}
       <div className="header-actions">
-        {/* Filter */}
         <select className="genre-select">
           <option value="">Genre</option>
           <option value="Action">Action</option>
@@ -22,7 +19,6 @@ export default function Header() {
           <option value="Crime">Crime</option>
         </select>
 
-        {/* Button */}
         <button className="add-btn">+ Ajouter un film</button>
       </div>
     </header>
