@@ -1,4 +1,8 @@
+import { useState } from "react";
+import AddForm from "./AddForm";
+
 export default function Header() {
+  const [add, setAdd] = useState(false)
   return (
     <header className="header">
       <div className="logo">
@@ -19,8 +23,11 @@ export default function Header() {
           <option value="Crime">Crime</option>
         </select>
 
-        <button className="add-btn">+ Ajouter un film</button>
+        <button className="add-btn" onClick={(() => setAdd(true))}>+ Ajouter un film</button>
       </div>
+      {add && (
+        <AddForm/>
+      )}
     </header>
   );
 }
