@@ -107,7 +107,7 @@ const movies = [
     rating: 4.8,
   },
   {
-    id: 2,
+    id: 10,
     title: "Train to Busan",
     description:
       "Passengers on a high-speed train fight for survival after a zombie outbreak spreads rapidly across South Korea.",
