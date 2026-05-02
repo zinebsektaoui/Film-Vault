@@ -1,10 +1,12 @@
 import movies from "../data/data";
+import GetDetails from "./GetDetails";
+import {useState} from "react";
 
-export default function TopThree({ movies }) {
+export default function TopThree({ movies, onDelete }) {
+  const [selectedMovie, setSelectedMovie] = useState(null);
   return (
     <section className="topthree">
       <h2>⭐ TOP 3 DES MEILLEURES FILMS</h2>
-
       <div className="topthree-container">
         {movies.map((movie) => (
           <div className="movie-card" key={movie.id}>
@@ -19,11 +21,14 @@ export default function TopThree({ movies }) {
                 ⭐ ⭐ ⭐ ⭐ ⭐<span>{movie.rating}/5</span>
               </div>
 
-              <button>Détails</button>
+              <button onClick={() => setSelectedMovie(movie)}>Détails</button>
             </div>
           </div>
         ))}
       </div>
+      {selectedMovie && 
+        <GetDetails movie={selectedMovie} onClose={() => setSelectedMovie(null)} onDelete={onDelete} />
+      }
     </section>
   );
 }
