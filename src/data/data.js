@@ -50,7 +50,7 @@ const movies = [
     actors: ["Stanley Tucci", "Kiernan Shipka"],
     image:
       "https://tse3.mm.bing.net/th/id/OIP.IWlRa_TleW2cM3O5YoSYEgHaK9?rs=1&pid=ImgDetMain&o=7&rm=3",
-    rating: 4.5,
+    rating: 4,
   },
 
   {
@@ -64,7 +64,7 @@ const movies = [
     actors: ["Sandra Bullock", "Trevante Rhodes"],
     image:
       "https://www.themoviedb.org/t/p/original/z6m7s4w4Erxnr5k2jc1TZR1AMva.jpg",
-    rating: 4.8,
+    rating: 3,
   },
 
   {
@@ -77,7 +77,7 @@ const movies = [
     actors: ["Han So-hee", "Park Hee-soon"],
     image:
       "https://m.media-amazon.com/images/M/MV5BN2ZiZWU3MzMtNGM5OC00ZWVkLTkxNjUtMTYwZGU4MzgxYzk0XkEyXkFqcGc@._V1_.jpg",
-    rating: 4.9,
+    rating: 4,
   },
 
   {
@@ -104,10 +104,11 @@ const movies = [
     actors: ["Song Kang-ho", "Cho Yeo-jeong"],
     image:
       "https://i.redd.it/nw5ebr64zb3b1.jpg",
-    rating: 4.8,
+    rating: 4,
   },
+  
   {
-    id: 10,
+    id: 9,
     title: "Train to Busan",
     description:
       "Passengers on a high-speed train fight for survival after a zombie outbreak spreads rapidly across South Korea.",
@@ -117,10 +118,11 @@ const movies = [
     actors: ["Gong Yoo", "Ma Dong-seok", "Jung Yu-mi"],
     image:
       "https://www.themoviedb.org/t/p/original/3H1WFCuxyNRP35oiL2qqwhAXxc0.jpg",
-    rating: 5,
+    rating: 3
   },
+  
   {
-    id: 4,
+    id: 10,
     title: "Alive",
     description:
       "A young gamer trapped alone in his apartment struggles to survive during a mysterious zombie apocalypse.",
@@ -134,7 +136,7 @@ const movies = [
   },
 
   {
-    id: 5,
+    id: 11,
     title: "Forgotten",
     description:
       "After his brother returns home following a kidnapping, a young man begins to suspect that something is terribly wrong.",
@@ -148,7 +150,7 @@ const movies = [
   },
 
   {
-    id: 6,
+    id: 12,
     title: "The Call",
     description:
       "Two women living in different timelines connect through a phone call and change each other's destinies.",
@@ -162,7 +164,7 @@ const movies = [
   },
 
   {
-    id: 7,
+    id: 13,
     title: "Snowpiercer",
     description:
       "In a frozen future, the last survivors of humanity live aboard a train divided by social classes.",
@@ -176,7 +178,7 @@ const movies = [
   },
 
   {
-    id: 8,
+    id: 14,
     title: "The Host",
     description:
       "A family fights to rescue their daughter after a mutant creature emerges from the Han River.",
@@ -188,6 +190,101 @@ const movies = [
       "https://image.tmdb.org/t/p/w1280/1bDa2d9VqqBQlk42Gduu37Rz1ob.jpg",
     rating: 2,
   },
+  
+  {
+    id: 15,
+    title: "John Wick",
+    description: "John Wick is a retired hitman trying to live a quiet life. After a personal tragedy, his past catches up with him in a brutal way. He returns to the underworld to take revenge with skill and precision.",
+    year: 2014,
+    genre: "Action",
+    director: "Chad Stahelski",
+    actors: ["Keanu Reeves"],
+    image: "https://tse3.mm.bing.net/th/id/OIP.knrcWto1G0eIm6rTBTR9bgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    rating: 3
+  },
+  
+  {
+    id: 16,
+    title: "Mad Max: Fury Road",
+    image: "https://tse4.mm.bing.net/th/id/OIP.zWhqu0_mLT7ypQ463OHusQHaKx?rs=1&pid=ImgDetMain&o=7&rm=3",
+    year: 2015,
+    genre: "Action",
+    rating: 4,
+    director: "George Miller",
+    actors: ["Tom Hardy", "Charlize Theron"],
+    description: "In a desert wasteland, Max joins Furiosa in a daring escape. They flee from a tyrant who controls water and power. The journey becomes a high-speed chase filled with chaos and survival."
+  },
+  
+  {
+    id: 17,
+    title: "The Promised Neverland",
+    image: "https://1.bp.blogspot.com/-ageCnju0B-k/XSFhY8RPvxI/AAAAAAAAcbg/-_yX4o8-pyANrsEI1CqgGFPySvNsSiihgCLcBGAs/s1600/07f56cb3c9220952600b0975a883b0f91546997210_full.jpg",
+    year: 2019,
+    genre: "Anime, Action",
+    rating: 4,
+    director: "Kaiu Shirai and Posuka Demizu",
+    actors: ["Eren", "Mikasa"],
+    description: "Humanity lives behind massive walls to protect itself from giant titans. When the walls are breached, chaos spreads and many lives are lost. Eren and his friends join the fight to reclaim their world."
+  },
+  
+  {
+    id: 18,
+    title: "Your Name",
+    image: "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+    year: 2016,
+    genre: "Anime, Romance",
+    rating: 4,
+    director: "Makoto Shinkai",
+    actors: ["Taki", "Mitsuha"],
+    description: "Two teenagers from different worlds mysteriously swap bodies. They begin to communicate and understand each other's lives. As they grow closer, a hidden truth changes everything."
+  },
+  
+  {
+    id: 19,
+    title: "Forrest Gump",
+    image: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    year: 1994,
+    genre: "Drama",
+    rating: 3,
+    director: "Robert Zemeckis",
+    actors: ["Tom Hanks"],
+    description: "Forrest Gump is a simple man with a kind heart. Despite his low intelligence, he accidentally influences major events in the 20th century. His journey is filled with love, loss, and unexpected success."
+  },
+  
+  {
+    id: 20,
+    title: "The Shawshank Redemption",
+    image: "https://tse1.mm.bing.net/th/id/OIP.4VaSguF9FOJxPIKHUM1HaQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    year: 1994,
+    genre: "Drama",
+    rating: 2,
+    director: "Frank Darabont",
+    actors: ["Tim Robbins", "Morgan Freeman"],
+    description: "Andy Dufresne is wrongly imprisoned for murder. Inside Shawshank prison, he forms a deep friendship with Red. Over time, hope and patience become his greatest tools for freedom."
+  },
+  
+  {
+    id: 21,
+    title: "Joker",
+    image: "https://tse4.mm.bing.net/th/id/OIP.TUyndwXEQLmigtnYCb7XWwHaFk?rs=1&pid=ImgDetMain&o=7&rm=3",
+    year: 2019,
+    genre: "Crime, Drama",
+    rating: 1,
+    director: "Todd Phillips",
+    actors: ["Joaquin Phoenix"],
+    description: "Arthur Fleck struggles with mental health and isolation. Society rejects him, pushing him deeper into darkness. His transformation into Joker becomes a symbol of chaos."
+  },
+  {
+    id: 22,
+    title: "Breaking Bad",
+    image: "https://th.bing.com/th/id/R.ac712b68c934c70f38ed8532dbd1c691?rik=Q0ee6jjCl1R7uA&pid=ImgRaw&r=0",
+    year: 2008,
+    genre: "Crime, Drama",
+    rating: 4,    
+    actors: ["Joaquin Phoenix"],
+    director: "Todd Phillips",
+    description: "Un professeur de chimie devient fabricant de drogue. Il plonge dans un monde dangereux pour assurer l’avenir de sa famille."
+  }
 ];
 
 export default movies;
