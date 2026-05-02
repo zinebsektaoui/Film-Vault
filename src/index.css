@@ -46,7 +46,11 @@ body {
   gap: 15px;
 }
 
-
+.top-up{
+  display: flex;
+  align-items: center;
+  gap: 1100px;
+}
 .genre-select {
   width: 150px;
   height: 42px;
@@ -336,7 +340,7 @@ body {
   font-family: "Courier New", monospace;
 }
 
-.all-movies-title {
+.top-up .all-movies-title {
   color: #ffc400;
   font-size: 22px;
   font-weight: 900;
@@ -661,4 +665,217 @@ h2 {
     height: 30px;
     font-size: 1.2rem;
   }
+}
+
+
+
+
+/* details pop up */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 30, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-card {
+  background: #0f172a;
+  color: white;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  margin-right: 0;
+  border-radius: 20px;
+  width: 800px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.popup-left img {
+  width: 250px;
+  border-radius: 15px;
+}
+.popup-right {
+  text-align: left;
+}
+.popup-right h1 {
+  margin-top: 0 ;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.tags {
+  display: flex;
+  gap: 20px;
+  height: 40px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.tags span {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #1e293b;
+}
+
+.popup-right h3{
+  font-size: 20px;
+  color: #7c4dff;
+  margin-bottom: 10px;
+}
+.popup-right p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #cbd5e1;
+  letter-spacing: 1px;
+}
+
+.rating {
+  color: gold;
+}
+
+hr {
+  margin: 15px 0;
+  width: 100%;
+  border: 0.5px solid #334155;
+}
+
+.actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.actions button {
+  padding: 10px 15px;
+  width: 120px;
+  font-size: 15px;
+  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.delete {
+  background: #8e4242;
+  border-radius: 1px solid #a20000;
+  color: #dedede;
+}
+
+.close {
+  background: #64748b;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* card lly feha update delete and detail f all movies */
+/* Options Button Container */
+.movie-options-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.movie-options {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(5px);
+}
+
+.movie-options:hover {
+  background: rgba(255, 107, 107, 0.8);
+  border-color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+/* Mini Card Menu Styles */
+.options-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  overflow: hidden;
+  animation: slideIn 0.2s ease;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.menu-item span:first-child {
+  font-size: 1.1rem;
+}
+
+.menu-item:hover {
+  background: #f5f5f5;
+}
+
+.menu-item.details:hover {
+  background: #e3f2fd;
+  color: #2196f3;
+}
+
+.menu-item.delete:hover {
+  background: #ffebee;
+  color: #f44336;
+}
+
+/* Separator line between menu items */
+.menu-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
