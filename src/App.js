@@ -23,12 +23,16 @@ function App() {
     localStorage.setItem("movies", JSON.stringify(movies));
   }, [movies]);
 
+  const deleteMovie = (id) => {
+    const updatedMovies = movies.filter(m => m.id !== id);
+    setMovies(updatedMovies);
+  }
   return (
     <div className="App">
       <Header setMovies={setMovies} />  {/* ← passe setMovies à Header */}
       <TopOne movie={topOneMovie} />
-      <TopThree movies={topThreeMovies} />
-      <AllMovies movies={movies} />  {/* ← passe movies à AllMovies */}
+      <TopThree movies={topThreeMovies} onDelete={deleteMovie} />
+      <AllMovies movies={movies} onDelete={deleteMovie}/>
     </div>
   );
 }
