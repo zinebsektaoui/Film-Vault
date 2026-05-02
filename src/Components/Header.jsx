@@ -14,16 +14,6 @@ export default function Header({ setMovies }) {
       </div>
 
       <div className="header-actions">
-        <select className="genre-select">
-          <option value="">Genre</option>
-          <option value="Action">Action</option>
-          <option value="Thriller">Thriller</option>
-          <option value="Drama">Drama</option>
-          <option value="Horror">Horror</option>
-          <option value="Animation">Animation</option>
-          <option value="Crime">Crime</option>
-        </select>
-
         <button className="add-btn" onClick={() => setAdd(true)}>
           + Ajouter un film
         </button>
