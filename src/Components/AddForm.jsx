@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddForm({ setMovies, onClose }) {  // ← assure-toi que onClose est là
+export default function AddForm({ setMovies, onClose }) {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -42,74 +42,26 @@ export default function AddForm({ setMovies, onClose }) {  // ← assure-toi que
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-btn" onClick={onClose}>  {/* ← ferme la modale */}
+        <button className="close-btn" onClick={onClose}>
           ✖
         </button>
 
         <h2>🎬 Ajouter un film</h2>
 
         <form className="movie-form" onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            name="title" 
-            placeholder="Titre du film" 
-            value={formData.title} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="text" name="title" placeholder="Titre du film" value={formData.title} onChange={handleChange} required/>
 
-          <textarea 
-            name="description" 
-            placeholder="Description" 
-            value={formData.description} 
-            onChange={handleChange} 
-            required 
-          />
+          <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange} required />
 
-          <input 
-            type="number" 
-            name="year" 
-            placeholder="Année de sortie" 
-            value={formData.year} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="number" name="year" placeholder="Année de sortie" value={formData.year} onChange={handleChange} required />
 
-          <input 
-            type="text" 
-            name="genre" 
-            placeholder="Genre" 
-            value={formData.genre} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="text" name="genre" placeholder="Genre" value={formData.genre} onChange={handleChange} required />
 
-          <input 
-            type="text" 
-            name="director" 
-            placeholder="Réalisateur" 
-            value={formData.director} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="text" name="director" placeholder="Réalisateur" value={formData.director} onChange={handleChange} required />
 
-          <input 
-            type="text" 
-            name="actors" 
-            placeholder="Acteurs principaux (séparés par des virgules)" 
-            value={formData.actors} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="text" name="actors" placeholder="Acteurs principaux (séparés par des virgules)" value={formData.actors} onChange={handleChange} required />
 
-          <input 
-            type="url" 
-            name="image" 
-            placeholder="URL de l'image" 
-            value={formData.image} 
-            onChange={handleChange} 
-            required 
-          />
+          <input type="url" name="image" placeholder="URL de l'image" value={formData.image} onChange={handleChange} required />
 
           <select name="rating" value={formData.rating} onChange={handleChange}>
             <option value="1">1 ⭐</option>
