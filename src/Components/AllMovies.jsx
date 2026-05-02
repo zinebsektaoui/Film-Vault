@@ -13,12 +13,15 @@ export default function AllMovies({ movies, onDelete }) {
   const handleClickOutside = () => {
     setMenuOpen(null);
   };
+
+  const [selectedGenre, setSelectedGenre] = useState("");// stock du genre selectn pour filtrage
+  const filtredMovies = selectedGenre ? movies.filter(m => m.genre.includes(selectedGenre)) : movies;
   return (
     <section className="all-movies" onClick={handleClickOutside}>
       <div className="top-up">
         <h2 className="all-movies-title">TOUS LES FILMS</h2>
-        <select className="genre-select">
-          <option value="">Genre</option>
+        <select className="genre-select" value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
+          <option value="">All movies</option>
           <option value="Action">Action</option>
           <option value="Thriller">Thriller</option>
           <option value="Drama">Drama</option>
@@ -28,7 +31,7 @@ export default function AllMovies({ movies, onDelete }) {
         </select>
       </div>
       <div className="all-movies-container">
-        {movies.map((movie) => (
+        {filtredMovies.map((movie) => (
           <div className="movieCard" key={movie.id}>
             <img className="movie-image" src={movie.image} alt={movie.title} />
 
